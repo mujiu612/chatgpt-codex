@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>25年读书回顾</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <main class="page">
+      <header class="hero">
+        <span class="hero__glow"></span>
+        <h1>25年读书回顾</h1>
+        <p>输入书名，获取豆瓣信息，确认后加入你的阅读星轨。</p>
+      </header>
+
+      <section class="search">
+        <div class="search__field">
+          <input id="book-input" type="text" placeholder="请输入书名，例如：活着" />
+          <button id="search-btn">搜索</button>
+        </div>
+        <div class="search__hint" id="search-hint">
+          支持自动补全，结果来自豆瓣建议接口。
+        </div>
+        <div class="search__results" id="results"></div>
+      </section>
+
+      <section class="preview">
+        <div class="preview__title">《我们的荆棘》</div>
+        <div class="carousel" id="carousel"></div>
+        <div class="axis">
+          <div class="axis__track" id="axis-track"></div>
+          <div class="axis__thumb" id="axis-thumb"></div>
+        </div>
+      </section>
+    </main>
+
+    <template id="result-template">
+      <article class="result-card">
+        <img class="result-card__cover" alt="书籍封面" />
+        <div class="result-card__info">
+          <h3 class="result-card__title"></h3>
+          <p class="result-card__meta"></p>
+          <button class="result-card__btn">确认加入</button>
+        </div>
+      </article>
+    </template>
+
+    <template id="book-template">
+      <div class="book-card">
+        <div class="book-card__glow"></div>
+        <img class="book-card__cover" alt="封面" />
+        <div class="book-card__name"></div>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
